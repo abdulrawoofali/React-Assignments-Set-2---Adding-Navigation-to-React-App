@@ -27,11 +27,14 @@ class App extends Component {
           </ul>
         </nav>
         <Switch>
-          <Route path="/about">
+          <Route path="/about" exact>
             <About />
           </Route>
-          <Route path="/">
+          <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="*">
+            <PageNotFound/>
           </Route>
         </Switch>
         <LocationDisplay/>
@@ -49,6 +52,9 @@ function Home(props) {
   
   function About(props) {
     return <><h3>You are on the about page</h3>  </>;
+  }
+  function PageNotFound(props){
+      return <> <h3>No match</h3></>
   }
 
   function LocationDisplay(props){
