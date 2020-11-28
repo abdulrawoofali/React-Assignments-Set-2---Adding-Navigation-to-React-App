@@ -9,10 +9,10 @@ class App extends Component {
       <Router>
         <div id="main">
      
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
 
     
-                <a href="/about">About</a>
+                <Link to="/about">About</Link>
         
           <Switch>
             <Route path="/about" exact>
