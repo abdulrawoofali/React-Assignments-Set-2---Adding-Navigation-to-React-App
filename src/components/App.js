@@ -61,7 +61,7 @@ function LocationDisplay(props) {
   //console.log("rendering location",location);
   return (
     <>
-      <p data-testid="location-display">{location.pathname}</p>
+      <h3 data-testid="location-display">{location.pathname}</h3>
     </>
   );
 }
