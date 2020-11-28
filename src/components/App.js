@@ -8,18 +8,12 @@ class App extends Component {
     return (
       <Router>
         <div id="main">
-          {/* Do not remove the main div */}
-
-          <nav>
-            <ul>
-              <li>
+     
                 <a href="/">Home</a>
-              </li>
-              <li>
+
+    
                 <a href="/about">About</a>
-              </li>
-            </ul>
-          </nav>
+        
           <Switch>
             <Route path="/about" exact>
               <About />
@@ -32,7 +26,7 @@ class App extends Component {
             </Route>
           </Switch>
           <LocationDisplay />
-        </div>
+          </div>
       </Router>
     );
   }
