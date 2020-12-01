@@ -13,6 +13,7 @@ class App extends Component {
           <Link to="/">Home</Link>
 
           <Link to="/about">About</Link>
+          <LocationDisplay />
 
           <Switch>
             <Route path="/about" exact>
@@ -25,7 +26,7 @@ class App extends Component {
               <PageNotFound />
             </Route>
           </Switch>
-          <LocationDisplay />
+         
         </div>
       
     );
