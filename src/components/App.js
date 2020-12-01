@@ -1,14 +1,14 @@
 import React, { Component, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <Router>
+    
         <div id="main">
-          <LocationDisplay />
+         
 
           <Link to="/">Home</Link>
 
@@ -25,8 +25,9 @@ class App extends Component {
               <PageNotFound />
             </Route>
           </Switch>
+          <LocationDisplay />
         </div>
-      </Router>
+      
     );
   }
 }
