@@ -1,34 +1,29 @@
 import React, { Component, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/App.css";
-import {Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
+import Location from "./Location";
 
 class App extends Component {
   render() {
     return (
-    
-        <div id="main">
-         
+      <div id="main">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Location/>
 
-          <Link to="/">Home</Link>
-
-          <Link to="/about">About</Link>
-          <LocationDisplay />
-
-          <Switch>
-            <Route path="/about" exact>
-              <About />
-            </Route>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="*">
-              <PageNotFound />
-            </Route>
-          </Switch>
-         
-        </div>
-      
+        <Switch>
+          <Route path="/about" exact>
+            <About />
+          </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="*">
+            <PageNotFound />
+          </Route>
+        </Switch>
+      </div>
     );
   }
 }
@@ -57,10 +52,6 @@ function PageNotFound(props) {
   );
 }
 
-function LocationDisplay(props) {
-  let location = useLocation();
-  //console.log("rendering location",location);
-  return <div data-testid="location-display">{location.pathname}</div>;
-}
+
 
 export default App;
