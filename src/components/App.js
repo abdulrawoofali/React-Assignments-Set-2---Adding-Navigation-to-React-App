@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
-import { Switch, Route, Link } from "react-router-dom";
-import LocationDisplay from "./LocationDisplay";
+import { Switch, Route, Link,useLocation } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -9,7 +8,6 @@ class App extends Component {
       <div id="main">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-       
 
         <Switch>
           <Route path="/about" exact>
@@ -22,7 +20,7 @@ class App extends Component {
             <PageNotFound />
           </Route>
         </Switch>
-        <LocationDisplay/>
+        <LocationDisplay />
       </div>
     );
   }
@@ -51,6 +49,10 @@ function PageNotFound(props) {
   );
 }
 
-
+function LocationDisplay() {
+  let loc = useLocation();
+  //console.log("rendering location",location);
+  return <div data-testid="location-display">{loc.pathname}</div>;
+}
 
 export default App;
