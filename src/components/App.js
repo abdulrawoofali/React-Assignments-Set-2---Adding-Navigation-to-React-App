@@ -1,5 +1,4 @@
 import React, { Component, useState } from "react";
-import { useLocation } from "react-router-dom";
 import "../styles/App.css";
 import { Switch, Route, Link } from "react-router-dom";
 import LocationDisplay from "./LocationDisplay";
@@ -10,7 +9,7 @@ class App extends Component {
       <div id="main">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <LocationDisplay/>
+       
 
         <Switch>
           <Route path="/about" exact>
@@ -23,6 +22,7 @@ class App extends Component {
             <PageNotFound />
           </Route>
         </Switch>
+        <LocationDisplay/>
       </div>
     );
   }
@@ -39,14 +39,13 @@ function Home(props) {
 function About(props) {
   return (
     <>
-      <h3>You are on the about page</h3>{" "}
+      <h3>You are on the about page</h3>
     </>
   );
 }
 function PageNotFound(props) {
   return (
     <>
-      {" "}
       <h3>No match</h3>
     </>
   );
