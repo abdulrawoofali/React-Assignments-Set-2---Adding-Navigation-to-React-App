@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/App.css";
 import { Switch, Route, Link } from "react-router-dom";
-import Location from "./Location";
+import LocationDisplay from "./LocationDisplay";
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
       <div id="main">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Location/>
+        <LocationDisplay/>
 
         <Switch>
           <Route path="/about" exact>

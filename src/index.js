@@ -2,7 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 import { BrowserRouter as Router} from "react-router-dom";
-//function generateCodeFromObject(obj){
+function generateCodeFromObject(obj){
+    //return a code generated string
+}
+module.export=generateCodeFromObject;
    
 
    
